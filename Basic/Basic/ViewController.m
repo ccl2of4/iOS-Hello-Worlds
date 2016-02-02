@@ -10,8 +10,6 @@
 
 @interface ViewController ()
 
-@property (nonatomic) UILabel *label;
-
 @end
 
 // This will make a label with the text "Hello, world!"
@@ -27,15 +25,15 @@
 
 - (void)setUpLabel
 {
-    self.label = [[UILabel alloc] init];
+    UILabel *label = [[UILabel alloc] init];
     
-    [self.label setText:@"Hello, world!"];
-    [self.label setFrame:CGRectMake(10.0f, 10.0f, 100.0f, 100.0f)];
+    [label setText:@"Hello, world!"];
+    [label setFrame:CGRectMake(10.0f, 10.0f, 100.0f, 100.0f)];
     
     // If this line is removed, the label will not be added to the view
     // hierarchy, and as a consequence it will be entirely ignored by
     // the view controller.
-    [self.view addSubview:self.label];
+    [self.view addSubview:label];
 }
 
 @end
