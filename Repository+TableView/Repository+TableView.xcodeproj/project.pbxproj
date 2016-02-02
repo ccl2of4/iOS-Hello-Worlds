@@ -19,8 +19,8 @@
 		B3902A901C612BDB00721688 /* NSException+AbstractMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = B3902A8A1C612BDB00721688 /* NSException+AbstractMethods.m */; };
 		B3902A941C612C4900721688 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3902A931C612C4900721688 /* AppDelegate.m */; };
 		B3902A971C612C6100721688 /* PersonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3902A961C612C6100721688 /* PersonTableViewCell.m */; };
-		B3902A9D1C612C8500721688 /* PersonTableViewCell+Person.m in Sources */ = {isa = PBXBuildFile; fileRef = B3902A9C1C612C8500721688 /* PersonTableViewCell+Person.m */; };
 		B3902AA11C61309900721688 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3902AA01C61309900721688 /* ViewController.xib */; };
+		B3C530081C6168AA00ED5213 /* PersonTableViewCell+Person.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C530071C6168AA00ED5213 /* PersonTableViewCell+Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,9 +58,9 @@
 		B3902A931C612C4900721688 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B3902A951C612C6100721688 /* PersonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonTableViewCell.h; sourceTree = "<group>"; };
 		B3902A961C612C6100721688 /* PersonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonTableViewCell.m; sourceTree = "<group>"; };
-		B3902A9B1C612C8500721688 /* PersonTableViewCell+Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PersonTableViewCell+Person.h"; sourceTree = "<group>"; };
-		B3902A9C1C612C8500721688 /* PersonTableViewCell+Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PersonTableViewCell+Person.m"; sourceTree = "<group>"; };
 		B3902AA01C61309900721688 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		B3C530061C6168AA00ED5213 /* PersonTableViewCell+Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PersonTableViewCell+Person.h"; sourceTree = "<group>"; };
+		B3C530071C6168AA00ED5213 /* PersonTableViewCell+Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PersonTableViewCell+Person.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,12 +139,13 @@
 		B3902A7A1C612BDA00721688 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				B3902A7E1C612BDA00721688 /* Model */,
+				B3902A911C612C0000721688 /* View */,
+				B3902A7B1C612BDA00721688 /* Controller */,
+				B3C530051C6168AA00ED5213 /* View+Model */,
+				B3902A881C612BDB00721688 /* Utils */,
 				B3902A921C612C4900721688 /* AppDelegate.h */,
 				B3902A931C612C4900721688 /* AppDelegate.m */,
-				B3902A7B1C612BDA00721688 /* Controller */,
-				B3902A7E1C612BDA00721688 /* Model */,
-				B3902A881C612BDB00721688 /* Utils */,
-				B3902A911C612C0000721688 /* View */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -188,10 +189,17 @@
 			children = (
 				B3902A951C612C6100721688 /* PersonTableViewCell.h */,
 				B3902A961C612C6100721688 /* PersonTableViewCell.m */,
-				B3902A9B1C612C8500721688 /* PersonTableViewCell+Person.h */,
-				B3902A9C1C612C8500721688 /* PersonTableViewCell+Person.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B3C530051C6168AA00ED5213 /* View+Model */ = {
+			isa = PBXGroup;
+			children = (
+				B3C530061C6168AA00ED5213 /* PersonTableViewCell+Person.h */,
+				B3C530071C6168AA00ED5213 /* PersonTableViewCell+Person.m */,
+			);
+			path = "View+Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,7 +309,7 @@
 				B3902A8E1C612BDB00721688 /* PersonRepositoryIntegrated.m in Sources */,
 				B3902A941C612C4900721688 /* AppDelegate.m in Sources */,
 				B3902A8C1C612BDB00721688 /* Person.m in Sources */,
-				B3902A9D1C612C8500721688 /* PersonTableViewCell+Person.m in Sources */,
+				B3C530081C6168AA00ED5213 /* PersonTableViewCell+Person.m in Sources */,
 				B3902A8B1C612BDB00721688 /* ViewController.m in Sources */,
 				B3902A571C612BC000721688 /* main.m in Sources */,
 			);
@@ -492,6 +500,7 @@
 				B3902A761C612BC000721688 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B3902A771C612BC000721688 /* Build configuration list for PBXNativeTarget "Repository+TableViewTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +509,7 @@
 				B3902A791C612BC000721688 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -11,7 +11,7 @@
 #import "PersonTableViewCell.h"
 #import "PersonTableViewCell+Person.h"
 
-@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface ViewController () <UITableViewDataSource>
 
 @property (nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic) NSArray *people;
@@ -32,8 +32,6 @@ static NSString * const CellReuseIdentifier = @"CellReuseIdentifier";
 - (void)setUpTableView
 {
     self.tableView.dataSource = self;
-    self.tableView.delegate = self;
-    
     [self.tableView registerClass:[PersonTableViewCell class] forCellReuseIdentifier:CellReuseIdentifier];
 }
 
