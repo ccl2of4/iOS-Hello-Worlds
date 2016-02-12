@@ -17,34 +17,13 @@
 
 @implementation PersonTableViewCell
 
-- (id)initWithCoder:(NSCoder *)aDecoder
-{
-    if (self = [super initWithCoder:aDecoder]) {
-        [self commonInit];
-    }
-    return self;
-}
-
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    if (self = [super initWithFrame:frame]) {
-        [self commonInit];
-    }
-    return self;
-}
-
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        [self commonInit];
+        [self setUpNameLabel];
+        [self setUpPhraseLabel];
     }
     return self;
-}
-
-- (void)commonInit
-{
-    [self setUpNameLabel];
-    [self setUpPhraseLabel];
 }
 
 - (void)setUpNameLabel
