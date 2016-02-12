@@ -25,8 +25,8 @@ static NSString * const CellReuseIdentifier = @"CellReuseIdentifier";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self loadData];
     [self setUpTableView];
+    [self loadData];
 }
 
 - (void)setUpTableView
